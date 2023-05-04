@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");//grabs the value from the id="generate" in html using a querySelctor and declares a new variable generateBtn and set it equal to that value
 
 var numbers = document.getElementById("numbers");//declares a new variable numbers and sets it equal to the html value of numbers which was an id declared earlier
@@ -17,7 +16,7 @@ var arrayNumbers = ["0","1","2","3","4","5","6","7","8","9"];//declares a varibl
 var arrayLowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];//declares the variable arrayLowerCaseLetters sets it equal to an array of the alphabet all lowercase with 26 elements
 var arrayUpperCaseLetters = ["A","B","C","D",'E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];//declares a variable arrayUpperCaseLetters sets it equal to an array of the alphabet all upper case with 26 elements
 var arraySpecialCharacters = ["!","@","#","$","%","^","&","*","(",")","?","/","<",">",",",".",":",";"];//declares a variable arraySpecialCharacters sets it equal to an array of special characters having 18 elements
-// Write password to the #password input
+
 
 function writePassword() {//declares a function writePassword
     var password = generatePassword();//declares new variable password sets it equal to function generatePassword
@@ -25,6 +24,7 @@ function writePassword() {//declares a function writePassword
 
     passwordText.value = password;//sets the value of variable passwordText equal to the value of variable of password
 }
+
 
 function generatePassword(){//declares function with the name of generatePassword
     var emptyArray = [];//declares new variable emptyArray and sets it equal to an empty array
@@ -53,14 +53,15 @@ function generatePassword(){//declares function with the name of generatePasswor
     }
     for(var i = 0; i<passwordLength.value; i++){//added a for loop which declares a new variable i and sets it equal 0, places i under the condition i have to be less then the value of variable of passwordLength and then  sets i to be added by 1
         var random = Math.floor(Math.random() * emptyArray.length);
-        pass = pass + emptyArray[random]; 
-        console.log(pass);
+        /*declares new variable random sets it equal to the function Math.floor(), and inside that fuinction is Math.randomn which is multiplied the variable emptyArray.length
+        Math.floor() rounds a number down to a whole number and Math.random() grabs a random value between 0 and 1*/
+
+        pass = pass + emptyArray[random];//sets varible pass equal to variable pass added with the variable emptyArray[random] 
         }
-        console.log(pass);
-        return pass;
+        return pass;//returns the new value of pass to the original function writePassword
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+generateBtn.addEventListener("click", writePassword);//variable generateBtn is lsitneing for an event thought addEventListner with the conditions on click and on click will sen to function writePassword
 
