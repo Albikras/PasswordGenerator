@@ -16,13 +16,17 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
-        
+        <!-- added a div box to add a few elements to the password generator-->
         <div>
-            <p><input type="number" id="passwordLength" class="lined" min="8" max="128">Length of password between 8-128</p>
-            <p><input type="checkbox" id="numbers" class="lined">Include Numbers?</p>
-            <p><input type="checkbox" id="lowerCaseLetters" class="lined">Include Lower Case Letters?</p>
-            <p><input type="checkbox" id="upperCaseLetters" class="lined">Include Upper Case Letters?</p>
-            <p><input type="checkbox" id="specialCharacters" class="lined">Include Special Characters?</p>
+          <!-- added a number text box to get an integer value from the user, also added id of passwordLength to be accessed from javascript later
+           set a max to 8, min to 128, and a placeholder of 60-->
+            <p><input type="number" id="passwordLength" min="8" max="128" placeholder="60">Length of password between 8-128</p>
+            <!-- added 4 checkboxes each with there own id to be accessed by javascript later-->
+            <p><input type="checkbox" id="numbers" >Include Numbers?</p>
+            <p><input type="checkbox" id="lowerCaseLetters">Include Lower Case Letters?</p>
+            <p><input type="checkbox" id="upperCaseLetters">Include Upper Case Letters?</p>
+            <p><input type="checkbox" id="specialCharacters">Include Special Characters?</p>
+            <!-- each of these values have a <p> element to have some text to guide the user as to what should be put in or what they want from there password-->
         </div>
         <div class="card-body">
           <textarea
