@@ -16,6 +16,14 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        
+        <div>
+            <p><input type="number" id="passwordLength" class="lined" min="8" max="128">Length of password between 8-128</p>
+            <p><input type="checkbox" id="numbers" class="lined">Include Numbers?</p>
+            <p><input type="checkbox" id="lowerCaseLetters" class="lined">Include Lower Case Letters?</p>
+            <p><input type="checkbox" id="upperCaseLetters" class="lined">Include Upper Case Letters?</p>
+            <p><input type="checkbox" id="specialCharacters" class="lined">Include Special Characters?</p>
+        </div>
         <div class="card-body">
           <textarea
             readonly
@@ -32,3 +40,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
